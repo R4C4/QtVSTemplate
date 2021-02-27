@@ -6,8 +6,9 @@ SET(TEST_FOLDER "tests")
 set(MODELS_PREFIX "models")
 
 # Define Project name. Note: You have only ONE Project, this is equivalent to the solution name in visual studio.
-project(${PROJECT_NAME} LANGUAGE CXX)
-
+get_filename_component(ProjectId ${CMAKE_CURRENT_SOURCE_DIR} NAME)
+string(REPLACE " " "_" ProjectId ${ProjectId})
+project(${ProjectId})
 
 # Include a utils.cmake which "hides" ugly code so that the individual cmake files can stay clean and beautiful.
 include(Utils.cmake)

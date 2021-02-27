@@ -73,6 +73,10 @@ endmacro()
 # Wrapper for adding a shared library
 # After adding the library, export headers are generated and include paths are set.
 macro(DEPLOY_SHARED_LIBRARY lib_name sources dependencies )
+
+	set(CMAKE_AUTOUIC ON)
+	set(CMAKE_AUTOMOC ON)
+	set(CMAKE_AUTORCC ON)
 	
 	execute_process(COMMAND ${CMAKE_COMMAND} -E echo_append "Adding Library ${lib_name}...")
 	

@@ -8,7 +8,7 @@ SET( _sources
 )
 
 #if they are using qt dependencies
-SET (_deps Qt${QT_VERSION_MAJOR}::Core )
+SET (_deps Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Widgets)
 
 # utils.cmake
 DEPLOY_SHARED_LIBRARY( ${LIBRARY_NAME} "${_sources}" "${_deps}" )
