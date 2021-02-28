@@ -5,6 +5,10 @@ SET(VIEWS_FOLDER "views")
 SET(TEST_FOLDER "tests")
 set(MODELS_PREFIX "models")
 
+set(CMAKE_PREFIX_PATH "D:/Qt/6.0.1/msvc2019_64/lib/cmake")
+list(APPEND CMAKE_PREFIX_PATH "D:/Qt/6.0.1/msvc2019_64/bin")
+
+
 # Define Project name. Note: You have only ONE Project, this is equivalent to the solution name in visual studio.
 get_filename_component(ProjectId ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 string(REPLACE " " "_" ProjectId ${ProjectId})
@@ -22,8 +26,8 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # This is Qt specific
-find_package(QT NAMES Qt6 Qt5 COMPONENTS Core Gui Widgets REQUIRED)
-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Gui Widgets REQUIRED)
+find_package(QT NAMES Qt6 Qt5 COMPONENTS Core Gui Widgets Concurrent REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Gui Widgets Concurrent REQUIRED)
 
 
 # From utils.cmake

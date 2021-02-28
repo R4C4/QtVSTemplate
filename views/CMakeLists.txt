@@ -14,6 +14,7 @@ SET( _sources main.cpp
 SET( _deps Qt${QT_VERSION_MAJOR}::Core
 		   Qt${QT_VERSION_MAJOR}::Gui
 		   Qt${QT_VERSION_MAJOR}::Widgets
+		   Qt${QT_VERSION_MAJOR}::Concurrent
 		   SampleClass
 )
 
